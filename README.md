@@ -1,47 +1,53 @@
-#RUN & JUMP Arduino Game Using LCD
-##Project Overview
+# RUN & JUMP Arduino Game Using LCD
+
+## Project Overview
 This project implements an interactive Arduino game where the player controls a character that can run and jump using a button. The game state is displayed on a 16x2 LCD screen.
 
-##Authors
-Shresth Deorari (2201MC38)
-Kashika Aggarwal (2201CS35)
-##Date
+## Authors
+- Shresth Deorari (2201MC38)
+- Kashika Aggarwal (2201CS35)
+
+## Date
 December 5, 2023
 
-##Table of Contents
-1)Project Aim
-2)Components Required
-3)Methodology
-4)Project Overview
-5)Source Code
-6)Acknowledgments
-7)References
-8)Figures and Pictures
-##Project Aim
+## Table of Contents
+1. [Project Aim](#project-aim)
+2. [Components Required](#components-required)
+3. [Methodology](#methodology)
+4. [Project Overview](#project-overview)
+5. [Source Code](#source-code)
+6. [Acknowledgments](#acknowledgments)
+7. [References](#references)
+8. [Figures and Pictures](#figures-and-pictures)
+
+## Project Aim
 The aim of this project is to create an interactive Arduino game using an LCD display. The player can control a character to run and jump using a button, and the game state is displayed on the LCD.
 
-##Components Required
-Arduino Nano
-16x2 LCD display
-I2C LCD driver
-Breadboard
-Push Button
-Potentiometer
-Connecting Wires
-##Methodology
+## Components Required
+- Arduino Nano
+- 16x2 LCD display
+- I2C LCD driver
+- Breadboard
+- Push Button
+- Potentiometer
+- Connecting Wires
+
+## Methodology
 The project uses an Arduino Nano connected to an LCD over I2C. The connections are as follows:
 
-Analog Pin A4: SDA pin of I2C
-Analog Pin A5: SCL pin of I2C
-Digital Pin 2: Connected to the push button to serve as an interrupt
+- Analog Pin A4: SDA pin of I2C
+- Analog Pin A5: SCL pin of I2C
+- Digital Pin 2: Connected to the push button to serve as an interrupt
+
 The circuit is designed on a breadboard, ensuring correct connections. If the LCD screen is not displaying correctly, adjust the potentiometer on the I2C driver to modify the LCD contrast level and check the address of the I2C driver.
 
-##Project Overview
+## Project Overview
 The project successfully implements a game where the player can control character movements on an LCD display. The use of interrupts adds interactivity, enhancing the user experience. Troubleshooting steps are provided to address potential issues with the LCD display.
 
-##Source Code
+## Source Code
 The source code for the RUN & JUMP game using Arduino Nano is provided below:
 
+```cpp
 #include <LiquidCrystal.h>
 
 #define PIN_BUTTON 2
@@ -280,11 +286,3 @@ void loop(){
         ++score;
     }
 }
-
-
-##Acknowledgments
-This project was created as part of an assignment for the Arduino course. Special thanks to our instructor for the guidance and support.
-
-##References
-Arduino Documentation: https://www.arduino.cc/reference/en/
-LiquidCrystal Library: https://www.arduino.cc/en/Reference/LiquidCrystal
